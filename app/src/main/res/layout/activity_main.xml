@@ -27,11 +27,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <CheckBox
+            android:id="@+id/termsBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_marginLeft="20sp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
         <TextView
             android:id = "@+id/terms"
             android:layout_width="wrap_content"
@@ -52,13 +53,16 @@
             android:orientation="horizontal"
             android:layout_weight="1">
         <Button
+            android:id="@+id/trial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:text="TRIAL"
-            android:layout_margin="30dp"/>
+            android:layout_margin="30dp"
+            />
         <Button
+            android:id="@+id/signUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
