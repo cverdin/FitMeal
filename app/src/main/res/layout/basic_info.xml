@@ -30,7 +30,7 @@ android:background="@color/info_background"
     android:textSize="20dp"
     android:layout_gravity="left"
     android:layout_margin="15dp"
-    android:background="@color/white"/>
+ />
 <LinearLayout
     android:orientation="horizontal"
     android:layout_width="match_parent"
@@ -127,6 +127,7 @@ INSERT LOGO
         android:layout_height="wrap_content"
         android:layout_margin="20dp"/>
     <Button
+        android:id="@+id/OK_info"
         android:text="OK"
         android:layout_weight="1"
         android:layout_width="0dp"

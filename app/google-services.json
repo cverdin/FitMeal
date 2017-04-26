@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "11332147555",
+    "firebase_url": "https://fitmeal-bdb69.firebaseio.com",
+    "project_id": "fitmeal-bdb69",
+    "storage_bucket": "fitmeal-bdb69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11332147555:android:25e02e3290c1fae9",
+        "android_client_info": {
+          "package_name": "com.myapps.carlos.fitmeal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11332147555-qdsq9lfueh8ut5rc6fijnqahq0gmu83t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myapps.carlos.fitmeal",
+            "certificate_hash": "7271d4b4e4f7b8fb321dfdc69f8f24086c043480"
+          }
+        },
+        {
+          "client_id": "11332147555-rt6mjvekjv87k8c23odvh5tkkinv9kek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKTg41xnPMUpCSfF4nMZkFq17SS1Bsi2M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11332147555-rt6mjvekjv87k8c23odvh5tkkinv9kek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
