@@ -1,29 +1,5 @@
 <resources>
     <string name="app_name">FitMeal</string>
-    <string name="app_description">Track your meals and calories with the help of our planner and recipe database. Sign up now or try it absolutely FREE!</string>
+    <string name="app_description">Track your meals and calories with the help of our recipe database.\nTry it absolutely FREE!</string>
     <string name= "welcome">Hello, \nBased on your information you need around ... Calories. Take a look at the following options carefully. </string>
-    <string-array name="height_ft">
-        <item> 1</item>
-        <item> 2</item>
-        <item> 3</item>
-        <item> 4</item>
-        <item> 5</item>
-        <item> 6</item>
-        <item> 7</item>
-
-    </string-array>
-    <string-array name="height_in">
-        <item> 1" </item>
-        <item> 2" </item>
-        <item> 3" </item>
-        <item> 4" </item>
-        <item> 5" </item>
-        <item> 6" </item>
-        <item> 7" </item>
-        <item> 8" </item>
-        <item> 9" </item>
-        <item> 10" </item>
-        <item> 11" </item>
-        <item> 12" </item>
-    </string-array>
 </resources>

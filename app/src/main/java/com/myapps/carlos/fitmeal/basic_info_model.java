@@ -5,4 +5,8 @@ package com.myapps.carlos.fitmeal;
  */
 
 public class basic_info_model {
+
+    public void basic_info_adapter(){
+
+    }
 }
