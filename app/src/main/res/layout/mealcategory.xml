@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <EditText
+        android:id="@+id/userInfoDisplay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="25dp"
         android:layout_margin="25dp"
-        android:text="@string/welcome"/>
+        />
 
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:orientation="horizontal">
+       android:orientation="horizontal"
+
+       >
        <ImageButton
-           android:layout_width="wrap_content"
+           android:id="@+id/breakfastButton"
+           android:layout_width="0dp"
            android:layout_height="wrap_content"
            android:src="@drawable/breakfast"
+           android:layout_weight="1"
            />
        <ImageButton
-           android:layout_width="wrap_content"
+           android:id="@+id/lunchButton"
+           android:layout_width="0dp"
            android:layout_height="wrap_content"
            android:src="@drawable/lunch"
+           android:layout_weight="1"
            />
 
     </LinearLayout>
@@ -31,12 +42,16 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <ImageButton
-            android:layout_width="wrap_content"
+            android:id="@+id/dinnerButton"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:src="@drawable/dinner"
             />
         <ImageButton
-            android:layout_width="wrap_content"
+            android:id="@+id/snackButton"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:src="@drawable/snack"
             />
@@ -44,3 +59,4 @@
     </LinearLayout>
 
 </LinearLayout>
+</ScrollView>
