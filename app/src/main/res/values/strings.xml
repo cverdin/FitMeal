@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">FitMeal</string>
     <string name="app_description">Track your meals and calories with the help of our recipe database.\nTry it absolutely FREE!</string>
-    <string name= "welcome">Hello, \nBased on your information you need around ... Calories. Take a look at the following options carefully. </string>
+    <string name="welcome">Hello, \nBased on your information you need around ... Calories. Take a look at the following options carefully. </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

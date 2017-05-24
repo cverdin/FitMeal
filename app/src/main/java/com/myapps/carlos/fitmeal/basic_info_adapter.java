@@ -82,7 +82,7 @@ public class basic_info_adapter extends Activity implements  AdapterView.OnItemS
         // Women: BMR = 655 + (4.35 x weight in pounds) + (4.7 x height in inches) - (4.7 x age in years)
 
         ageInput = (EditText) findViewById(R.id.age);
-        String input = ageInput.getText().toString();
+        String input = ageInput.getText().toString().trim();
         nameInput = (EditText) findViewById(R.id.userName);
         name = nameInput.getText().toString();
 
