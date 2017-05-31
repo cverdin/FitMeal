@@ -1,25 +1,35 @@
 package com.myapps.carlos.fitmeal;
 
 import android.app.Activity;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+
+import static com.myapps.carlos.fitmeal.R.drawable.lunch;
+
 
 /**
  * Created by Carlos on 4/24/2017.
  */
 
 public class MealCategoryAdapter extends Activity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
-
-    FragmentManager fragmentManager;
 
     Spinner active_amount;
     TextView calories;
@@ -34,8 +44,7 @@ public class MealCategoryAdapter extends Activity implements AdapterView.OnItemS
 
     EditText searchInput;
     Button queryButton;
-    String queryString = "";
-    String myUrl= "http://www.recipepuppy.com/api/";
+
     String result = "";
     HttpGetRequest getRequest;
 
@@ -48,7 +57,6 @@ public class MealCategoryAdapter extends Activity implements AdapterView.OnItemS
         /**
          * Fragment shall be used for recipe
          * */
-       fragmentManager = getFragmentManager();
 
         //spinner element
         active_amount = (Spinner) findViewById(R.id.physical_activity);
@@ -109,16 +117,55 @@ public class MealCategoryAdapter extends Activity implements AdapterView.OnItemS
 
     @Override
     public void onClick(View view) {
-        queryString = "?q="+ searchInput.toString();
+        String myUrl= "http://www.recipepuppy.com/api/?q=".concat(searchInput.getText().toString());
 
         getRequest = new HttpGetRequest();
+
         try {
-            result = getRequest.execute(myUrl.concat(queryString)).get();
-            Toast.makeText(this, result, Toast.LENGTH_LONG).show();
+            result = getRequest.execute(myUrl).get();
 
         }catch(Exception e){
             e.printStackTrace();
             Toast.makeText(this, "Failed!", Toast.LENGTH_SHORT).show();
+        }
+
+        parse(result);
+
+    }
+    public void parse(String in){
+        try {
+            JSONObject parentObject = new JSONObject(in);
+            JSONArray parentArray = parentObject.getJSONArray("results");
+
+            //USE STRINGBUFFER W  FOR LOOP
+
+            JSONObject childObject = parentArray.getJSONObject(0);
+
+            String recipeName = childObject.getString("title");
+            String ingredients = childObject.getString("ingredients");
+            String imgUrl = childObject.getString("thumbnail");
+            String externalURL = childObject.getString("href");
+
+            ImageView thumbnail = (ImageView) findViewById(R.id.recipe_image);
+
+            if(!imgUrl.isEmpty()) {
+                Picasso.with(this).load(imgUrl).into(thumbnail);
+            }
+            else{
+                Picasso.with(this).load(R.drawable.lunch).into(thumbnail);
+            }
+
+            TextView recipeInstr = (TextView) findViewById(R.id.recipe_instructions);
+            TextView url = (TextView) findViewById(R.id.url);
+            recipeInstr.setText(recipeName + ": " + "\n" + ingredients);
+            url.setText(externalURL + "\n\n");
+
+
+
+        } catch(JSONException e){
+            e.printStackTrace();
+        }catch(Exception e){
+            e.printStackTrace();
         }
 
     }

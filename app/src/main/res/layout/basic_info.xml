@@ -150,6 +150,7 @@ android:background="@color/info_background"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="right"
+            android:inputType="number"
             />
 
     </LinearLayout>
